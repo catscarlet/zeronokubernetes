@@ -1,2 +1,5 @@
-# zeronokubernetes
-Start Kubernetes from zero
+# Zeronokubernetes
+
+Start Kubernetes from zero.
+
+This project is only available in Chinese.
