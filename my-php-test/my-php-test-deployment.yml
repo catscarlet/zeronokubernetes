@@ -1,0 +1,32 @@
+# ------------------- Deployment Definition ------------------- #
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-php-test
+spec:
+  selector:
+    matchLabels:
+      app: my-php-test
+  replicas: 6
+  template:
+    metadata:
+      labels:
+        app: my-php-test
+    spec:
+      imagePullSecrets:
+      - name: regcred
+      containers:
+      - name: my-php-test-pod
+        image: php-www-data:20180717170240
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 80
+        env:
+        - name: MYSQL_SERVER
+          value: "127.0.1.1"
+        - name: MYSQL_ACCOUNT
+          value: "my-web-test-user"
+        - name: MYSQL_PASSWORD
+          value: "8qFV8GgNnT6moLZw"
+        - name: MYSQL_DATABASE
+          value: "my-web-test"

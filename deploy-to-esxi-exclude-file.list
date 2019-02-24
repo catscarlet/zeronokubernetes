@@ -1,0 +1,11 @@
+bin
+deploy-to-esxi-exclude-file.list
+deploy-to-esxi.sh
+packages
+bin_bak*
+bin_master_side_bak*
+bin_node_side_bak*
+bin_all_side_bak*
+temp-all-side
+temp-master-side
+temp-node-side

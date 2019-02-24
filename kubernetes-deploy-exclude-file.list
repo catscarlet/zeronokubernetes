@@ -1,0 +1,5 @@
+kubernetes-deploy-exclude-file.list
+bin
+temp-all-side
+temp-master-side
+temp-node-side

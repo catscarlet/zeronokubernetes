@@ -1,0 +1,12 @@
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: traefik-ingress-service-php-www-data-service
+spec:
+  rules:
+  - http:
+      paths:
+      - backend:
+          serviceName: php-www-data-service
+          servicePort: 80

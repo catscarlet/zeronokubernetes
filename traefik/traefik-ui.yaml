@@ -1,0 +1,28 @@
+# ------------------- Service Definition ------------------- #
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: traefik-web-ui
+  namespace: kube-system
+spec:
+  selector:
+    k8s-app: traefik-ingress-lb
+  ports:
+  - name: web
+    port: 80
+    targetPort: 8080
+# ------------------- Ingress Definition ------------------- #
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: traefik-web-ui
+  namespace: kube-system
+spec:
+  rules:
+  - http:
+      paths:
+      - backend:
+          serviceName: traefik-web-ui
+          servicePort: 8080
