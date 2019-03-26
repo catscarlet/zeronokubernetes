@@ -1,6 +1,6 @@
 # Zeronokubernetes
 
-Start Kubernetes from zero.
+Start to build Kubernetes Server from zero.
 
 This project is only available in Chinese for now.
 
